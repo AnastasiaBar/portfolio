@@ -1,0 +1,301 @@
+body
+{
+	background: #8a8a8a;
+	width: 100%;
+	height: 100%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img
+{
+	width: 320px;
+	height: 360px;
+	padding: 10px;
+}
+p
+{
+	margin: 10px;
+}
+
+.box 
+{
+   width: 70%;
+   background-color: #ebebeb;
+   position: absolute;
+   left:0;
+   right:0;
+   margin: 0 auto;
+   top:10%;
+}
+
+.photo {
+  grid-area: photo;
+  background-color: #333234;
+  text-align: center;
+}
+
+.contact {
+  grid-area: contact;
+  background-color: #333234;
+  text-align: center;
+
+}
+
+.education {
+  grid-area: education;
+  background-color: #333234;
+
+}
+
+.name {
+  grid-area: name;
+  text-align: center;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  vertical-align: center;
+  background-color: #333234;
+
+}
+
+.skills {
+  grid-area: skills;
+  text-align: center;
+}
+
+.code {
+  grid-area: code;
+  width: 100%;
+}
+
+.english {
+  grid-area: english;
+}
+
+.container {
+  display: grid;
+  box-shadow: 0 0 20px rgba(0,0,0,0.5);
+  grid-template-columns: 40% auto ;
+  grid-template-areas: 
+    "photo name"
+    "photo skills"
+    "contact skills"
+    "contact code"
+    "education code"
+    "education english"
+    "footer footer";
+
+}
+
+
+.text-name
+{
+	font-size: 40px;
+    color: #333234;
+    margin: 30px 0 10px 0;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+	color: #ebebeb;
+}
+.junior
+{
+  font-size: 16px;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  color: #8a8a8a;
+  margin: 10px 0 20px 0 0;
+}
+
+.contact-text
+{
+	color: #ebebeb;
+	font-size: 30px;
+	text-align: center;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+
+}
+
+.contact-info
+{
+	color: #8a8a8a;
+	text-align: justify;
+	margin: 20px 15px;
+	display: inline-block;
+	font-size: 18px;
+}
+
+.code-text
+{
+	font-size: 30px;
+  	color: #333234;
+  	width: 100%;
+  	text-align: left;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+
+}
+
+.code-exs
+{
+	color: #8a8a8a;
+	background-color: #333234;
+	text-align: justify;
+	margin: 20px 15px;
+	display: inline-block;
+  width: 95%;
+}
+
+.fun-text
+{
+	margin: 0 50px 0 50px;
+}
+.ln
+{
+	font-size: 18px;
+	margin: 20px 10px 40px 10px;
+}
+
+.footer
+{
+  grid-area: footer;
+	background-color: #333234;
+	padding: 20px 0px;
+	color: #ebebeb;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+.ul-skills
+{
+	display: inline-block;	
+	text-align: justify;
+	margin: 20px 30px;
+	font-size: 18px;
+	width: 200px;
+	height: 100px;
+	color: #ebebeb;
+
+}
+
+ul
+{
+	margin: 0 0 0 30px;
+}
+li
+{
+	font-size: 16px;
+	color: #333234;
+}
+
+@media (max-width: 800px)  {
+
+  .footer-text
+    {
+        font-family: Verdana, Arial, Helvetica, sans-serif;
+        font-size: 16px;
+
+    }
+	.code-text
+{
+	font-size: 30px;
+  	color: #333234;
+  	width: 100%;
+  	text-align: center;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+
+}
+	.education {
+  grid-area: education;
+  background-color: #333234;
+  text-align: center;
+
+}
+.contact-info
+{
+	width: 60%;
+	color: #8a8a8a;
+	text-align: center;
+	margin: 20px 15px;
+	display: inline-block;
+	font-size: 18px;
+}
+  .container {
+  display: grid;
+  box-shadow: 0 0 20px rgba(0,0,0,0.5);
+  grid-template-columns: auto ;
+  grid-template-areas: 
+    "name"
+    "photo"
+    "contact "
+    "education"
+    "skills"
+    "code"
+    "english"
+    "footer";
+
+}
+}
+
+@media (max-width: 1100px) and (min-width: 800px ) {
+  .container {
+  display: grid;
+  box-shadow: 0 0 20px rgba(0,0,0,0.5);
+  grid-template-columns: 40% auto ;
+  grid-template-areas: 
+    "name name"
+    "photo photo"
+    "contact education"
+    "skills code"
+    "skills english"
+    "footer footer";
+
+}
+.code-text
+{
+  font-size: 20px;
+    color: #333234;
+    width: 100%;
+    text-align: left;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+
+}
+
+}
+
+a
+{
+	text-decoration: none;
+	color: #ededed;
+}
+
+.skills-left
+{
+	color: #333234;
+}
+
+.logo-photo
+{
+  height: 52px;
+  width: 100px;
+  margin: -10px 0 0 0;
+}
+
+.footer-text
+{
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    padding: 0 50px 0 0;
+}
+
+.code-exs p a
+{
+  font-size: 16px;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  color: #8a8a8a;
+  cursor: pointer;
+  text-decoration: underline;
+
+}
