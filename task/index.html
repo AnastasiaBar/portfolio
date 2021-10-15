@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8" /> 
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="media/media.css">
+	<title>Тестовое задание</title>
+</head>
+<body>
+<header>
+	<div class="box">
+		<section class="section-logo">
+
+			<input id="menu-toggle" type="checkbox"/>
+		    <label class="menu-btn" for="menu-toggle">
+		      <span></span>
+		    </label>
+			<div class="logo">
+				<img src="img/logo.png" alt="logo" >
+
+			</div>
+			<ul id="navbar">
+				<img src="img/logo.png" alt="logo" id="photo-menu">
+				<li><a href="#" class="menu-item">Main</a></li>
+				<li><a href="#" class="menu-item">Services</a></li>
+				<li><a href="#" class="menu-item">Projects</a></li>
+				<li><a href="#" class="menu-item">Contacts</a></li>
+				<li><a href="#" class="menu-item">About us</a></li>
+			</ul>
+			<input type="text" class="">
+			<div class="log-header">
+				<a href="#openModalSearch"><img src="img/Sign In.png" id="search"></a>
+				<a href="#openModal"><img src="img/Vector.png"></a>
+				<a href="#openModal" id="LogIn">Log in</a>
+			</div>
+			<div id="openModal" class="modalDialog">
+				<div id="modal">
+					<a href="#close" title="Закрыть" class="close">X</a>
+					<h2>Log in</h2>
+					<h4>Name*</h4>
+					<input type="text" name="" id="name">
+					<h4>Password*</h4>
+					<input type="text" name="" id="password">
+					<a href="#"><p>I forgot the password</p></a>
+					<button id="active-log">Log in</button>
+					<button>Sign in</button>
+				</div>
+			</div>
+			<div id="openModalSearch" class="modalDialogSearch">
+				<div id="modalSearch">
+					<a href="#closeSearch" title="Закрыть" class="closeSearch">X</a>
+					<img src="img/logo.png" alt="logo" id="photo-menu">
+					<input type="text" name="" placeholder="Search">
+				</div>
+			</div>
+		</section>
+	</div>
+</header>
+<main>
+	<div class="box">
+		<section class="soft">
+			<div class="container-soft">
+				<h2>Software development <br>and optimization</h2>
+				<div class="cont-soft">
+					<div class="soft-box">
+						<h3>We give guarantees</h3>
+						<p>We work only by agreement and we do not take payment for the work that has not yet been completed.</p>
+						<a href="#">Learn more >></a>
+					</div>
+					<div class="soft-box">
+						<h3>We support the project</h3>
+						<p>We know how to attract targeted traffic to a site and convert it into sales.</p>
+						<a href="#" id="card-two">Learn more >></a>
+					</div>
+					<div class="soft-box">
+						<h3>We are always in touch</h3>
+						<p>We are always on the line 24/7. Seriously. Even if you just want to talk.</p>
+						<a href="#" id="card-three">Learn more >></a>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="project">
+			<div class="container-project">
+				<h3>Our projects</h3>
+				<div class="project">
+					<div class="pr-box" id="arrow" onclick="plusSlides(-2)">
+						<img src="img/arrow left.png">
+					</div>
+					<div class="slider-box">
+						<div class="pr-box slide" id ="project-one">
+							<img src="img/Picture.png">
+							<h3>OdnoKarta</h3>
+							<p>Extbel team created an app “Odnokarta” that keeps all discount cards quickly and easily in one application.</p>
+							<a href="#">Read more >></a>
+						</div>
+						<div class="pr-box slide" id="project-two">
+							<img src="img/Picture (1).png">
+							<h3>Raketa.by</h3>
+							<p>Extbel team created a website and mobile version of the network of offline stores and an online store of children's toys.</p>
+							<a href="#">Read more >></a>
+						</div>
+						<div class="pr-box slide" id="project-two" style="display: none;">
+							<img src="img/photo-slider.jpg">
+							<h3>Raketa.by</h3>
+							<p>Extbel team created a website and mobile version of the network of offline stores and an online store of children's toys.</p>
+							<a href="#">Read more >></a>
+						</div>
+					</div>
+					<div class="pr-box" id="arrow2" onclick="plusSlides(2)">
+						<img src="img/arrow right.png">
+					</div>
+				</div>
+				<div class="project-button">
+					<button class="dot" onclick="currentSlide(1)" ></button>
+					<button class="dot" onclick="currentSlide(2)"></button>
+					<button class="dot" onclick="currentSlide(3)"></button>
+				</div>
+			</div>
+		</section>
+	</div>
+</main>
+<footer>
+	<div class="box">
+		<div class="con-footer">
+			<ul id="navbar-footer">
+				<li><a href="#">About us</a></li>
+				<li><a href="#">Services</a></li>
+				<li><a href="#">Projects</a></li>
+				<li><a href="#">Gallery</a></li>
+				<li><a href="#">Contacts</a></li>
+			</ul>
+		</div>
+		<div class="con-footer">
+			<ul id="navbar-footer">
+				<li><a href="#"><img src="img/WhatsApp.png"></a></li>
+				<li><a href="#"><img src="img/Slack.png"></a></li>
+				<li><a href="#"><img src="img/Instagram.png"></a></li>
+			</ul>
+		</div>
+	</div>
+</footer>
+<script type="text/javascript" src="script/script.js"></script>
+</body>
+</html>
