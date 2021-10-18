@@ -2,10 +2,12 @@
 <html>
 <head>
 	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="content-type" content="text/html; charset=UTF-8" /> 
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link rel="stylesheet" type="text/css" href="media/media.css">
+	<link rel="stylesheet" href="ui-components-master/ChiefSlider/chief-slider.css">
 	<title>Тестовое задание</title>
 </head>
 <body>
@@ -19,7 +21,6 @@
 		    </label>
 			<div class="logo">
 				<img src="img/logo.png" alt="logo" >
-
 			</div>
 			<ul id="navbar">
 				<img src="img/logo.png" alt="logo" id="photo-menu">
@@ -29,7 +30,12 @@
 				<li><a href="#" class="menu-item">Contacts</a></li>
 				<li><a href="#" class="menu-item">About us</a></li>
 			</ul>
-			<input type="text" class="">
+			 <form>
+			    <div class="search">
+			     <input type="search" class="place_for_search"  id="text-to-find">
+			     <input id="submit" class="button_for_search" onclick="FindOnPage('text-to-find',true);" >
+			   </div>
+			  </form>
 			<div class="log-header">
 				<a href="#openModalSearch"><img src="img/Sign In.png" id="search"></a>
 				<a href="#openModal"><img src="img/Vector.png"></a>
@@ -85,38 +91,43 @@
 		<section class="project">
 			<div class="container-project">
 				<h3>Our projects</h3>
-				<div class="project">
-					<div class="pr-box" id="arrow" onclick="plusSlides(-2)">
-						<img src="img/arrow left.png">
-					</div>
-					<div class="slider-box">
-						<div class="pr-box slide" id ="project-one">
-							<img src="img/Picture.png">
-							<h3>OdnoKarta</h3>
-							<p>Extbel team created an app “Odnokarta” that keeps all discount cards quickly and easily in one application.</p>
-							<a href="#">Read more >></a>
-						</div>
-						<div class="pr-box slide" id="project-two">
-							<img src="img/Picture (1).png">
-							<h3>Raketa.by</h3>
-							<p>Extbel team created a website and mobile version of the network of offline stores and an online store of children's toys.</p>
-							<a href="#">Read more >></a>
-						</div>
-						<div class="pr-box slide" id="project-two" style="display: none;">
-							<img src="img/photo-slider.jpg">
-							<h3>Raketa.by</h3>
-							<p>Extbel team created a website and mobile version of the network of offline stores and an online store of children's toys.</p>
-							<a href="#">Read more >></a>
-						</div>
-					</div>
-					<div class="pr-box" id="arrow2" onclick="plusSlides(2)">
-						<img src="img/arrow right.png">
-					</div>
-				</div>
-				<div class="project-button">
-					<button class="dot" onclick="currentSlide(1)" ></button>
-					<button class="dot" onclick="currentSlide(2)"></button>
-					<button class="dot" onclick="currentSlide(3)"></button>
+				    <div class="slider">
+				      <div class="slider__wrapper">
+				        <div class="slider__items">
+				          <div class="slider__item">
+				            <div class="pr-box slide" id ="project-one">
+				              <img src="img/Picture.png">
+				              <h3>OdnoKarta</h3>
+				              <p>Extbel team created an app “Odnokarta” that keeps all discount cards quickly and easily in one application.</p>
+				              <a href="#">Read more >></a>
+				            </div>
+				          </div>
+				          <div class="slider__item">
+				            <div class="pr-box slide" id="project-one">
+				              <img src="img/Picture (1).png">
+				              <h3>Raketa.by</h3>
+				              <p>Extbel team created a website and mobile version of the network of offline stores and an online store of children's toys.</p>
+				              <a href="#">Read more >></a>
+				            </div>
+				          </div>
+				          <div class="slider__item">
+				            <div class="pr-box slide" id="project-one" >
+				              <img src="img/photo-slider.png">
+				              <h3>Raketa.by</h3>
+				              <p>Extbel team created a website and mobile version of the network of offline stores and an online store of children's toys.</p>
+				              <a href="#">Read more >></a>
+				            </div>
+				          </div>
+				        </div>
+				      </div>
+
+				      <a href="#" class="slider__control" data-slide="prev"></a>
+				      <a href="#" class="slider__control" data-slide="next"></a>
+				      <ol class="slider__indicators">
+				        <li data-slide-to="0"></li>
+				        <li data-slide-to="1"></li>
+				        <li data-slide-to="2"></li>
+				      </ol>
 				</div>
 			</div>
 		</section>
@@ -142,6 +153,7 @@
 		</div>
 	</div>
 </footer>
+<script defer src="ui-components-master/ChiefSlider/chief-slider.min.js"></script>
 <script type="text/javascript" src="script/script.js"></script>
 </body>
 </html>

@@ -7,7 +7,6 @@
   left: 0;
   right: 0;
   margin: 0 auto;
-  /*  border: 1px solid green; */
 }
 
 .section-logo {
@@ -34,14 +33,35 @@
   font-family: NotoSans;
 }
 
-.section-logo input {
-  margin: 0 0 0 60px;
-  border: 1px solid #000;
+.search {
   width: 400px;
+  border: 1px solid #000;
+  min-height: 20px;
+  margin: 0 0 0 60px;
   height: 48px;
+}
+
+input[type=search] {
+  border: none;
+  width: 304px;
+  outline: none;
+}
+
+#submit {
+  width: 48px;
+  height: 48px;
+  border: none;
   border-radius: none;
-  background: url("../img/search-two.png") 100% 100% no-repeat;
+  background: url("../img/search-two.png") no-repeat 100% 100%;
   background-size: contain;
+}
+
+input {
+  margin: 0 0 0 20px;
+  border: 1px solid #000;
+  width: 295px;
+  height: 28px;
+  border-radius: none;
 }
 
 .log-header {
@@ -133,9 +153,9 @@
 }
 
 .project {
-  /* border: 1px solid orange; */
   background: #F3FAFF;
   display: flex;
+  height: 800px;
 }
 
 .slider-box {
@@ -195,8 +215,7 @@
 
 #project-one, #project-two {
   background-color: #fff;
-  box-shadow: 0 0 15px rgba(1, 88, 186, 0.4);
-  margin: 0 10px;
+  /*   box-shadow: 0 0 15px rgba(1, 88, 186, 0.4); */
 }
 
 #project-two img {
@@ -323,4 +342,8 @@
   background: none;
   font-size: 20px;
   color: #3F97FB;
+}
+
+.slider__wrapper {
+  overflow: hidden;
 }
