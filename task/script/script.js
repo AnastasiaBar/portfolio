@@ -15,42 +15,37 @@ activelog.addEventListener('click', function()
 });
 
 /*slider*/
-let w, res;
-
-let slideIndex = 1;
-showSlides(slideIndex);
-
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
-
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-function showSlides(n) {
-  let i, k=0;
-  let slides = document.getElementsByClassName("slide");
-  let dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}    
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
-      i++;
-  }
-  for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";  
-  dots[slideIndex-1].className += " active";
-}
-
-function someFunc(n) {
-  w = window.innerWidth;
-  return w;
-}
-
-window.addEventListener('resize', function() {
-  console.log("Размер окна изменен");
-  res = someFunc();
-  console.log(res);
+ document.addEventListener('DOMContentLoaded', function () {
+  const slider = new ChiefSlider('.slider', {
+    loop: true,
+    autoplay: true,
+    interval: 3000,
+  });
 });
+
+ /*search*/
+let result, locale, result_store;
+let result_arr = [];
+
+function func() {
+  locale = document.body.innerHTML;  
+}
+setTimeout(func, 1000);  
+function FindOnPage(name, status) {
+  let input = document.getElementById(name).value; 
+    function FindOnPageGo() {
+      let search = '/'+input+'/g';  
+      let pr = document.body.innerHTML;   
+      result = pr.match(/>(.*?)</g);
+      for(let i = 0; i < result.length; i++) {
+        result_arr[i] = result[i].replace(eval(search), '<span style="background-color:rgb(0%, 35%, 73%, 0.5);">'+input+'</span>'); 
+      }
+      for(let i = 0; i < result.length;i++) {
+        pr = pr.replace(result[i],result_arr[i]);
+      }
+      document.body.innerHTML = pr;
+  }
+  function FindOnPageBack() { document.body.innerHTML = locale; }
+  if(status) { FindOnPageBack(); FindOnPageGo(); } 
+}
+
